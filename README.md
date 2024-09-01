@@ -1,5 +1,5 @@
 # Argon-Assault
- A 3D arcade game where you get as far as possible without losing in order to get the highest score possible.
+ A 3D rail arcade game where you get as far as possible without losing in order to get the highest score possible.
 
 Overview:
 Embark on a thrilling 3D arcade adventure in Argon Assault, where your mission is to defend the planet Argon from an overwhelming invasion. As you navigate through hostile environments, your survival depends on how far you can go without being overwhelmed, all while aiming for the highest score possible.
