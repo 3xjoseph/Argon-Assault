@@ -2,14 +2,19 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms;
 
 public class PlayerControls : MonoBehaviour
 {
-    float xOffset;
-    float yOffset;
+    float xOffset, yOffset;
+    float xThrow, yThrow; 
     [SerializeField] float movementSpeed;
-    [SerializeField] float xRange = 5f;
-    [SerializeField] float yRange = 5f;
+    [SerializeField] float xRange;
+    [SerializeField] float yRange;
+    [SerializeField] float positionPitchFactor;
+    [SerializeField] float controlPitchFactor;
+    [SerializeField] float positionYawFactor;
+    [SerializeField] float controlRollFactor;
 
     void Update()
     {
@@ -20,13 +25,27 @@ public class PlayerControls : MonoBehaviour
 
     private void ProcessRotation()
     {
-        transform.localRotation = Quaternion.Euler(-30, 30, 0);
+
+        // Pitch Position On Screen
+        float pitchDueToPosition = transform.localPosition.y * positionPitchFactor;
+        // Pitch Control Throw
+        float pitchDueToControlthrow = yThrow * controlPitchFactor;
+
+        
+        //Pitch
+        float pitch = pitchDueToPosition + pitchDueToControlthrow;
+        //Yaw
+        float yaw = transform.localPosition.x * positionYawFactor;
+        //Roll
+        float roll = xThrow * controlRollFactor;
+
+        transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
     }
 
     private void ProcessTranslation()
     {
-        float xThrow = Input.GetAxis("Horizontal");
-        float yThrow = Input.GetAxis("Vertical");
+        xThrow = Input.GetAxis("Horizontal");
+        yThrow = Input.GetAxis("Vertical");
 
         xOffset = (xThrow * Time.deltaTime) * movementSpeed;
         float rawXPos = transform.localPosition.x + xOffset;

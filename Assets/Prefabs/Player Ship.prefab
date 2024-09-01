@@ -58,6 +58,10 @@ MonoBehaviour:
   movementSpeed: 20
   xRange: 5
   yRange: 5
+  positionPitchFactor: -2
+  controlPitchFactor: -10
+  positionYawFactor: 2.5
+  controlRollFactor: -20
 --- !u!1001 &3802899044163128
 PrefabInstance:
   m_ObjectHideFlags: 0
