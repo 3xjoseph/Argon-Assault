@@ -5,15 +5,20 @@ using UnityEngine;
 
 public class PlayerControls : MonoBehaviour
 {
-    [SerializeField] float xOffset = .1f;
+    float xOffset;
+    float yOffset;
+    [SerializeField] float movementSpeed;
     void Update()
     {
         float xThrow = Input.GetAxis("Horizontal");
         float yThrow = Input.GetAxis("Vertical");
 
+        xOffset = (xThrow * Time.deltaTime) * movementSpeed;
         float newXPos = transform.localPosition.x + xOffset;
 
-        transform.localPosition = new Vector3 (newXPos, transform.localPosition.y, transform.localPosition.z);
+        yOffset = (yThrow* Time.deltaTime) * movementSpeed;
+        float newYPos = transform.localPosition.y + yOffset;
+        transform.localPosition = new Vector3 (newXPos, newYPos, transform.localPosition.z);
         
           
     }
