@@ -13,6 +13,18 @@ public class PlayerControls : MonoBehaviour
 
     void Update()
     {
+        ProcessTranslation();
+        ProcessRotation();
+
+    }
+
+    private void ProcessRotation()
+    {
+        transform.localRotation = Quaternion.Euler(-30, 30, 0);
+    }
+
+    private void ProcessTranslation()
+    {
         float xThrow = Input.GetAxis("Horizontal");
         float yThrow = Input.GetAxis("Vertical");
 
@@ -20,12 +32,10 @@ public class PlayerControls : MonoBehaviour
         float rawXPos = transform.localPosition.x + xOffset;
         float clampXPos = Mathf.Clamp(rawXPos, -xRange, xRange);
 
-        yOffset = (yThrow* Time.deltaTime) * movementSpeed;
+        yOffset = (yThrow * Time.deltaTime) * movementSpeed;
         float rawYPos = transform.localPosition.y + yOffset;
         float clampYPos = Mathf.Clamp(rawYPos, -yRange, yRange);
 
-        transform.localPosition = new Vector3 (clampXPos, clampYPos, transform.localPosition.z);
-        
-          
+        transform.localPosition = new Vector3(clampXPos, clampYPos, transform.localPosition.z);
     }
 }
