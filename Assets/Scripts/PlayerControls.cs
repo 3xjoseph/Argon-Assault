@@ -7,16 +7,34 @@ using UnityEngine.SocialPlatforms;
 
 public class PlayerControls : MonoBehaviour
 {
+    //Key Bind Setings
+    [Header("Key Bind Settings")]
+    [Tooltip("Player Movements and action")]
+    [SerializeField] InputAction movement; 
+    [SerializeField] InputAction fire;
+    
+    //General Settings
+    [Header("General Settings")]
+    [Tooltip("How fast ship moves up and down based upon player input")]
+    [SerializeField] float movementSpeed;
+    [Tooltip("How far can the player move")] [SerializeField] float xRange, yRange;
+
+    // Screen Position Based Tuning
+    [Header("Screen Position Based Tuning")]
+    [SerializeField] float positionPitchFactor; 
+    [SerializeField] float positionYawFactor;
+
+    //Player Input Based Tuning
+    [Header("Player Input Based Tuning")]
+    [SerializeField] float controlPitchFactor; 
+    [SerializeField] float controlRollFactor;
+    
+    //Laser Array Settings
+    [Header("Laser Array Settings")]
+    [Tooltip("Add player laser")] [SerializeField] GameObject[] lasers;
+
     float xOffset, yOffset;
     float xThrow, yThrow; 
-
-    [SerializeField] InputAction movement, fire;
-
-    [SerializeField] float movementSpeed;
-    [SerializeField] float xRange, yRange;
-    [SerializeField] float positionPitchFactor, controlPitchFactor, positionYawFactor, controlRollFactor;
-
-    [SerializeField] GameObject[] lasers;
 
     void OnEnable() 
     {
