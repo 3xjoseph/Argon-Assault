@@ -83,30 +83,21 @@ public class PlayerControls : MonoBehaviour
         // Old input system - Input.GetButton("Fire1")
         if (fire.ReadValue<float>() > 0.5)
         {
-            ActivateLasers();
+            SetLasersActive(true);
         }
         else 
         {
-            DeactivateLasers();
+            SetLasersActive(false);
         }
-
-
-
     }
 
-    void ActivateLasers()
+    void SetLasersActive(bool activator)
     {
-        foreach (GameObject lasers in lasers)
+        foreach (GameObject laser in lasers)
         {
-            lasers.SetActive(true);
+            var emissionModule = laser.GetComponent<ParticleSystem>().emission; 
+            emissionModule.enabled = activator;
         }
     }
 
-    void DeactivateLasers()
-    {
-        foreach (GameObject lasers in lasers)
-        {
-            lasers.SetActive(false);
-        }
-    }
 }
