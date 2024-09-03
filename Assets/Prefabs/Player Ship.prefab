@@ -9,7 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3363494618855134507}
+  - component: {fileID: 4184061866619461048}
   - component: {fileID: 7018138829256237484}
+  - component: {fileID: 3240103926055003429}
+  - component: {fileID: 7575753842168861500}
   m_Layer: 0
   m_Name: Player Ship
   m_TagString: Untagged
@@ -45,6 +48,33 @@ Transform:
   - {fileID: 4225324884156521329}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -1.041, y: -4.393, z: -0.333}
+--- !u!54 &4184061866619461048
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2899334720336055367}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &7018138829256237484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,9 +157,43 @@ MonoBehaviour:
   xRange: 5
   yRange: 5
   positionPitchFactor: -2
-  controlPitchFactor: -10
   positionYawFactor: 2.5
+  controlPitchFactor: -10
   controlRollFactor: -20
+  lasers: []
+--- !u!114 &3240103926055003429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2899334720336055367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 895b75d7ded06b44fa27a5dfd7833844, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &7575753842168861500
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2899334720336055367}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 8.96088, y: 1.4980097, z: 10.8226385}
+  m_Center: {x: 0.003058419, y: -0.24901058, z: 1.2246318}
 --- !u!1001 &3802899044163128
 PrefabInstance:
   m_ObjectHideFlags: 0
