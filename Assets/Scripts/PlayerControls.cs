@@ -9,10 +9,14 @@ public class PlayerControls : MonoBehaviour
 {
     float xOffset, yOffset;
     float xThrow, yThrow; 
+
     [SerializeField] InputAction movement, fire;
+
     [SerializeField] float movementSpeed;
     [SerializeField] float xRange, yRange;
     [SerializeField] float positionPitchFactor, controlPitchFactor, positionYawFactor, controlRollFactor;
+
+    [SerializeField] GameObject[] lasers;
 
     void OnEnable() 
     {
@@ -79,13 +83,30 @@ public class PlayerControls : MonoBehaviour
         // Old input system - Input.GetButton("Fire1")
         if (fire.ReadValue<float>() > 0.5)
         {
-            Debug.Log("Shoot");
+            ActivateLasers();
         }
-        else {
-            Debug.Log("Don't Shoot");
+        else 
+        {
+            DeactivateLasers();
         }
 
 
 
+    }
+
+    void ActivateLasers()
+    {
+        foreach (GameObject lasers in lasers)
+        {
+            lasers.SetActive(true);
+        }
+    }
+
+    void DeactivateLasers()
+    {
+        foreach (GameObject lasers in lasers)
+        {
+            lasers.SetActive(false);
+        }
     }
 }

@@ -322,6 +322,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Laser (Left)
       objectReference: {fileID: 0}
+    - target: {fileID: 6013317685829609627, guid: 233a079420ce73f4fb279305839a359b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6431273003944387962, guid: 233a079420ce73f4fb279305839a359b, type: 3}
+      propertyPath: TrailModule.ratio
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6431273003944387962, guid: 233a079420ce73f4fb279305839a359b, type: 3}
+      propertyPath: TrailModule.worldSpace
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6431273003944387962, guid: 233a079420ce73f4fb279305839a359b, type: 3}
+      propertyPath: TrailModule.sizeAffectsWidth
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
