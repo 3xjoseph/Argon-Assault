@@ -173,6 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 895b75d7ded06b44fa27a5dfd7833844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loadLevelDelay: 1
 --- !u!65 &7575753842168861500
 BoxCollider:
   m_ObjectHideFlags: 0
