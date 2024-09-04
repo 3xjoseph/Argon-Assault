@@ -9,6 +9,8 @@ public class CollisionHandler : MonoBehaviour
      [Header("General Settings")]
      [Tooltip("How many seconds of delay before the game reloads")]
      [SerializeField] float loadLevelDelay;
+
+     [SerializeField] ParticleSystem explosionFX;
    void OnTriggerEnter(Collider other) 
    {
           StartCrashSequence();
@@ -16,8 +18,11 @@ public class CollisionHandler : MonoBehaviour
 
     void StartCrashSequence()
     {
+          explosionFX.Play();
           var playerControls = GetComponent<PlayerControls>();
           playerControls.enabled = false;
+          GetComponent<MeshRenderer>().enabled = false;
+          GetComponent<BoxCollider>().enabled = false;
           Invoke("ReloadLevel", loadLevelDelay);
     }
 
