@@ -617,6 +617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c68b1384a70c8a47a9a02936db01f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathVFX: {fileID: 0}
 --- !u!1 &2039800056
 GameObject:
   m_ObjectHideFlags: 0
@@ -650,6 +651,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c68b1384a70c8a47a9a02936db01f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathVFX: {fileID: 3849866968295768679, guid: 16f2c65c665ffe147aa85e0317ea713f, type: 3}
 --- !u!136 &2039800058
 CapsuleCollider:
   m_ObjectHideFlags: 0
