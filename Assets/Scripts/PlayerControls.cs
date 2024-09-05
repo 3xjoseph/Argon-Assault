@@ -48,7 +48,6 @@ public class PlayerControls : MonoBehaviour
         fire.Disable();
     }
 
-
     void Update()
     {
         ProcessTranslation();

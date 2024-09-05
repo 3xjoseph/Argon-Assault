@@ -13,10 +13,18 @@ public class Enemy : MonoBehaviour
     [SerializeField] int hitPoints = 3;
 
      ScoreBoard scoreBoard;
+     
 
-    void Start() 
+    void Start()
     {
         scoreBoard = FindObjectOfType<ScoreBoard>();
+        AddRigidBody();
+    }
+
+    void AddRigidBody()
+    {
+        Rigidbody rb = gameObject.AddComponent<Rigidbody>();
+        rb.useGravity = false;
     }
 
     void OnParticleCollision(GameObject other)
