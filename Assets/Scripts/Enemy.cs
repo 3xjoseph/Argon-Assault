@@ -8,10 +8,9 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] GameObject deathVFX;
     [SerializeField] Transform  parent;
-
-    ScoreBoard scoreBoard;
-
     [SerializeField] int scorePerHit = 5;
+
+     ScoreBoard scoreBoard;
 
     void Start() 
     {
