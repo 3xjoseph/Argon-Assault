@@ -43,6 +43,7 @@ public class Enemy : MonoBehaviour
     void KillEnemy()
     {
         InstantiateVFX(deathVFX);
+        scoreBoard.IncreaseScore(scorePerHit);
         Destroy(gameObject);
     }
 
@@ -50,7 +51,6 @@ public class Enemy : MonoBehaviour
     {
         InstantiateVFX(hitVFX);
         hitPoints -= 1;
-        scoreBoard.IncreaseScore(scorePerHit);
     }
 
     void InstantiateVFX(GameObject vfxParameter)
