@@ -6,8 +6,9 @@ using UnityEngine.VFX;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] GameObject deathVFX;
-    [SerializeField] GameObject hitVFX;
+    [Header("Particle for Enemies")]
+    [Tooltip("Add a death explosion particle VFX")][SerializeField] GameObject deathVFX;
+    [Tooltip("Add a hit particle VFX")][SerializeField] GameObject hitVFX;
     [SerializeField] int scorePerHit = 5;
     [SerializeField] int hitPoints = 3;
 
@@ -27,6 +28,7 @@ public class Enemy : MonoBehaviour
         Rigidbody rb = gameObject.AddComponent<Rigidbody>();
         rb.useGravity = false;
     }
+
 
     void OnParticleCollision(GameObject other)
     {
