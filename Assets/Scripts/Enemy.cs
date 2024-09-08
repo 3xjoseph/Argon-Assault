@@ -7,7 +7,7 @@ using UnityEngine.VFX;
 public class Enemy : MonoBehaviour
 {
     [Header("Particle for Enemies")]
-    [Tooltip("Add a death explosion particle VFX")][SerializeField] GameObject deathVFX;
+    [Tooltip("Add a death explosion particle VFX")][SerializeField] GameObject deathFX;
     [Tooltip("Add a hit particle VFX")][SerializeField] GameObject hitVFX;
     [SerializeField] int scorePerHit = 5;
     [SerializeField] int hitPoints = 3;
@@ -42,7 +42,7 @@ public class Enemy : MonoBehaviour
 
     void KillEnemy()
     {
-        InstantiateVFX(deathVFX);
+        InstantiateVFX(deathFX);
         scoreBoard.IncreaseScore(scorePerHit);
         Destroy(gameObject);
     }
@@ -53,9 +53,9 @@ public class Enemy : MonoBehaviour
         hitPoints -= 1;
     }
 
-    void InstantiateVFX(GameObject vfxParameter)
+    void InstantiateVFX(GameObject fxParameter)
     {
-        GameObject vfx = Instantiate(vfxParameter, transform.position, Quaternion.identity);
-        vfx.transform.parent = parentGameObject.transform;
+        GameObject fx = Instantiate(fxParameter, transform.position, Quaternion.identity);
+        fx.transform.parent = parentGameObject.transform;
     }
 }

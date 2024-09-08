@@ -11,14 +11,22 @@ public class CollisionHandler : MonoBehaviour
      [SerializeField] float loadLevelDelay;
 
      [SerializeField] ParticleSystem explosionFX;
-   void OnTriggerEnter(Collider other) 
-   {
-          StartCrashSequence();
-   }
+     AudioSource audioSource;
+
+     void Start() 
+     {
+            audioSource = GetComponent<AudioSource>();
+     }
+
+     void OnTriggerEnter(Collider other) 
+     {
+            StartCrashSequence();
+     }
 
     void StartCrashSequence()
     {
           explosionFX.Play();
+          audioSource.Play();
           var playerControls = GetComponent<PlayerControls>();
           playerControls.enabled = false;
           GetComponent<MeshRenderer>().enabled = false;

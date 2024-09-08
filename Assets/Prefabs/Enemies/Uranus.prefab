@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5898440675009089193}
   - component: {fileID: 6166683768932593554}
   - component: {fileID: 3166554027173452621}
+  - component: {fileID: -6145985480255963761}
   m_Layer: 0
   m_Name: Uranus
   m_TagString: Untagged
@@ -97,11 +98,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c68b1384a70c8a47a9a02936db01f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathVFX: {fileID: 3849866968295768679, guid: 16f2c65c665ffe147aa85e0317ea713f, type: 3}
+  deathFX: {fileID: 3849866968295768679, guid: 16f2c65c665ffe147aa85e0317ea713f, type: 3}
   hitVFX: {fileID: 3849866968295768679, guid: 2a4f9586e0216b548a4a8a2891718e0a, type: 3}
-  parent: {fileID: 0}
   scorePerHit: 6
   hitPoints: 4
+--- !u!65 &-6145985480255963761
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241170535074649445}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 8.070742, y: 5.8879204, z: 15.896421}
+  m_Center: {x: 0, y: -0.0000010728836, z: -0.000009775162}
 --- !u!1 &920431792447400080
 GameObject:
   m_ObjectHideFlags: 0

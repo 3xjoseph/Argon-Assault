@@ -336,6 +336,7 @@ GameObject:
   - component: {fileID: 3493739898277494117}
   - component: {fileID: 848678835213238102}
   - component: {fileID: 7825178810104040796}
+  - component: {fileID: 5356981054960731020}
   m_Layer: 0
   m_Name: Erobos
   m_TagString: Untagged
@@ -421,11 +422,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c68b1384a70c8a47a9a02936db01f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathVFX: {fileID: 3849866968295768679, guid: 16f2c65c665ffe147aa85e0317ea713f, type: 3}
+  deathFX: {fileID: 3849866968295768679, guid: 16f2c65c665ffe147aa85e0317ea713f, type: 3}
   hitVFX: {fileID: 3849866968295768679, guid: 2a4f9586e0216b548a4a8a2891718e0a, type: 3}
-  parent: {fileID: 0}
   scorePerHit: 10
   hitPoints: 10
+--- !u!65 &5356981054960731020
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191893244183078999}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 9.442199, y: 2.8027794, z: 10.768427}
+  m_Center: {x: 0, y: -0.0000007152557, z: -0.000007390976}
 --- !u!1 &1215679247384595278
 GameObject:
   m_ObjectHideFlags: 0

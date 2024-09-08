@@ -1627,6 +1627,7 @@ GameObject:
   - component: {fileID: 1500044483697563969}
   - component: {fileID: 6581809655548326203}
   - component: {fileID: 2245482937515021728}
+  - component: {fileID: -8527971842327394854}
   m_Layer: 0
   m_Name: Mercury
   m_TagString: Untagged
@@ -1712,10 +1713,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c68b1384a70c8a47a9a02936db01f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathVFX: {fileID: 3849866968295768679, guid: 16f2c65c665ffe147aa85e0317ea713f, type: 3}
+  deathFX: {fileID: 3849866968295768679, guid: 16f2c65c665ffe147aa85e0317ea713f, type: 3}
   hitVFX: {fileID: 3849866968295768679, guid: 2a4f9586e0216b548a4a8a2891718e0a, type: 3}
   scorePerHit: 5
   hitPoints: 2
+--- !u!65 &-8527971842327394854
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9032431856439181656}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 11.085112, y: 2.8066294, z: 10.785946}
+  m_Center: {x: 0, y: -0.00000071525574, z: -0.000006914139}
 --- !u!1 &9145841951653465548
 GameObject:
   m_ObjectHideFlags: 0
