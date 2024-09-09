@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MusicPlayer : MonoBehaviour
 {
+    //Singleton Pattern for Music Player
     void Awake() 
     {
         int numMusicPlayers = FindObjectsOfType<MusicPlayer>().Length;
