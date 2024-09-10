@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7697062229733094595}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0006093228, y: 0.8811925, z: -0.0105554, w: 0.47263947}
+  m_LocalRotation: {x: 0.00061141653, y: 0.88119197, z: -0.010555015, w: 0.47264042}
   m_LocalPosition: {x: 349.94, y: 31.14, z: 424.85}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -66,6 +66,7 @@ GameObject:
   - component: {fileID: 4834544801215363153}
   - component: {fileID: 4115213793758256260}
   - component: {fileID: 2473126394626379505}
+  - component: {fileID: 1007045860473851980}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -147,6 +148,66 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8521657991108158304}
   m_Enabled: 1
+--- !u!114 &1007045860473851980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8521657991108158304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeTrigger: {fileID: 4834544801215363153}
+  volumeLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  stopNaNPropagation: 1
+  finalBlitToCameraTarget: 0
+  antialiasingMode: 1
+  temporalAntialiasing:
+    jitterSpread: 0.75
+    sharpness: 0.25
+    stationaryBlending: 0.95
+    motionBlending: 0.85
+  subpixelMorphologicalAntialiasing:
+    quality: 2
+  fastApproximateAntialiasing:
+    fastMode: 1
+    keepAlpha: 0
+  fog:
+    enabled: 1
+    excludeSkybox: 1
+  debugLayer:
+    lightMeter:
+      width: 512
+      height: 256
+      showCurves: 1
+    histogram:
+      width: 512
+      height: 256
+      channel: 3
+    waveform:
+      exposure: 0.12
+      height: 256
+    vectorscope:
+      size: 256
+      exposure: 0.12
+    overlaySettings:
+      linearDepth: 0
+      motionColorIntensity: 4
+      motionGridSize: 64
+      colorBlindnessType: 0
+      colorBlindnessStrength: 1
+  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_ShowToolkit: 0
+  m_ShowCustomSorter: 0
+  breakBeforeColorGrading: 0
+  m_BeforeTransparentBundles: []
+  m_BeforeStackBundles: []
+  m_AfterStackBundles: []
 --- !u!1001 &4716939419831954835
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -202,8 +263,43 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6560835381738980713, guid: 7c564e183cd5f7f43a41ce1492ac2d44, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1327932256965200943}
   m_SourcePrefab: {fileID: 100100000, guid: 7c564e183cd5f7f43a41ce1492ac2d44, type: 3}
+--- !u!1 &1907602568637524218 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6560835381738980713, guid: 7c564e183cd5f7f43a41ce1492ac2d44, type: 3}
+  m_PrefabInstance: {fileID: 4716939419831954835}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1327932256965200943
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1907602568637524218}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 14
+  m_CollisionDetection: 0
 --- !u!4 &8553760217188679546 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4017458189908366057, guid: 7c564e183cd5f7f43a41ce1492ac2d44, type: 3}
